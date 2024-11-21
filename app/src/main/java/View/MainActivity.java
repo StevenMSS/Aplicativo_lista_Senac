@@ -18,9 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     SharedPreferences preferences;
     public static final String NOME_PREFERENCES = "pref_listvip";
-
+    SharedPreferences.Editor listavip;
     Pessoa pessoa;
-
     PessoaController controller;
     EditText PrimeiroNome, SobreNome, CursoDesejado, TelefoneContato;
     Button LIMPAR, SALVAR, FINALIZAR;
@@ -31,16 +30,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         preferences = getSharedPreferences(NOME_PREFERENCES, 0);
-        SharedPreferences.Editor listavip = preferences.edit();
+        listavip = preferences.edit();
+
 
         pessoa = new Pessoa();
         controller = new PessoaController();
         controller.toString();
 
-        pessoa.setPrimeiroNome("Joao");
-        pessoa.setSobrenome("Gomes");
+        pessoa.setPrimeiroNome("Steven");
+        pessoa.setSobrenome("Moura");
         pessoa.setCursoDesejado("Desenvolvimento de Sistema");
-        pessoa.setTelefoneContato("12 3456789");
+        pessoa.setTelefoneContato("34 99227-5218");
 
         PrimeiroNome = findViewById(R.id.editPrimeiroNome);
         SobreNome = findViewById(R.id.editSobreNome);
@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         SALVAR = findViewById(R.id.SALVAR);
 
         FINALIZAR = findViewById(R.id.FINALIZAR);
-
 
     FINALIZAR.setOnClickListener(new View.OnClickListener(){
         @Override
@@ -94,6 +93,10 @@ public class MainActivity extends AppCompatActivity {
             SobreNome.setText("");
             CursoDesejado.setText("");
             TelefoneContato.setText("");
+
+            listavip.clear();
+            listavip.apply();
+
         }
     });
     }
