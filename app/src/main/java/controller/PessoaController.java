@@ -38,7 +38,7 @@ public class PessoaController {
         listavip.apply();
     }
     public Pessoa buscar(Pessoa pessoa){
-        pessoa.setPrimeiroNome(preferences.getString("PrimeiroNome","Steven"));
+        pessoa.setPrimeiroNome(preferences.getString("PrimeiroNome","NA"));
         pessoa.setSobrenome(preferences.getString("Sobrenome","Moura"));
         pessoa.setCursoDesejado(preferences.getString("CursoDesejado","Desenvolvimento de Sistemas"));
         pessoa.setTelefoneContato(preferences.getString("TelefoneContato","34 99227-5218"));
