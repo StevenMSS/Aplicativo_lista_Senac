@@ -18,8 +18,4 @@ public class SplashActivity extends AppCompatActivity {
         comutarTelaSplash;
     }
 
-    private void cumutarTelaSplash(){
-
-    }
-
 }
