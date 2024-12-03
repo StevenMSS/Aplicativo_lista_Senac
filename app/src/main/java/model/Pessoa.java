@@ -3,11 +3,8 @@ package model;
 public class Pessoa {
 
     private String PrimeiroNome;
-
     private String Sobrenome;
-
     private String CursoDesejado;
-
     private String TelefoneContato;
 
     public Pessoa() {
@@ -43,6 +40,17 @@ public class Pessoa {
 
     public void setTelefoneContato(String telefoneContato) {
         this.TelefoneContato = telefoneContato;
+    }
+
+    @Override
+    public String toString(){
+        return "Pessoa{"+
+                "PrimeiroNome"+ PrimeiroNome + '\''+
+                "Sobrenome"+ Sobrenome + '\''+
+                "CursoDesejado"+ CursoDesejado + '\''+
+                "TelefoneContato"+ TelefoneContato + '\''+
+                '}';
+
     }
 
 

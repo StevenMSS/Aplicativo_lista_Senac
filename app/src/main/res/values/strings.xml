@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Teste04</string>
+    <string name="primeiro_nome">Primeiro Nome</string>
+    <string name="sobrenome">SobreNome</string>
+    <string name="cursodesejado">CursoDesejado</string>
+    <string name="telefonecontato">TelefoneContato</string>
+    <string name="app_lista_curso">APP Lista Curso</string>
+    <string name="salvar">SALVAR</string>
+    <string name="limpar">LIMPAR</string>
+    <string name="finalizar">FINALIZAR</string>
 </resources>
