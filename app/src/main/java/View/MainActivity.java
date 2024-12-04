@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             pessoa.setCursoDesejado(CursoDesejado.getText().toString());
             pessoa.setTelefoneContato(TelefoneContato.getText().toString());
 
-            Toast.makeText(MainActivity.this,"Dados Salvos" + pessoa.toString(),Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this,"Dado Salvos" + pessoa.toString(),Toast.LENGTH_LONG).show();
 
             controller.SALVAR(pessoa);
 
