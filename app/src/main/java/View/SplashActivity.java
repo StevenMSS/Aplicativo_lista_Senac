@@ -2,7 +2,9 @@ package View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.example.teste04.R;
 
@@ -15,7 +17,18 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        comutarTelaSplash;
+        cumutarTelaSplash();
+    }
+
+    private void cumutarTelaSplash(){
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent TelaPrincipal = new Intent(SplashActivity.this,MainActivity.class);
+                startActivity(TelaPrincipal);
+                finish();
+            }
+        },Time_OUT_SPLASH);
     }
 
 }
